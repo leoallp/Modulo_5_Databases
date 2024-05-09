@@ -62,7 +62,8 @@ count
 (1 row)
 
 --2. ¿Cuántos inscritos hay en total?
-SELECT SUM(cantidad) AS total_inscritos
+SELECT SUM(cantidad) 
+AS total_inscritos
 FROM INSCRITOS;
 
 ---------terminal----------
@@ -89,7 +90,8 @@ cantidad |   fecha    | fuente
 (2 rows)
 
 --4. ¿Cuántos inscritos hay por día? (entendiendo un día como una fecha distinta de ahora en adelante)
-SELECT fecha, SUM(cantidad) AS inscritos_por_dia
+SELECT fecha, SUM(cantidad) 
+AS inscritos_por_dia
 FROM INSCRITOS
 GROUP BY fecha
 ORDER BY fecha;
@@ -109,7 +111,8 @@ fecha    | inscritos_por_dia
 (8 rows)
 
 --5. ¿Qué día se inscribieron la mayor cantidad de personas y cuántas personas se inscribieron en ese día?
-SELECT fecha, SUM(cantidad) AS total_inscritos
+SELECT fecha, SUM(cantidad) 
+AS total_inscritos
 FROM INSCRITOS
 GROUP BY fecha
 ORDER BY total_inscritos DESC
