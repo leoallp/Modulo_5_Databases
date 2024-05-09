@@ -55,7 +55,7 @@ select max(columna) from tabla; -- numero maximo
 select Min(columna) from tabla; --numero minimo
 select count(*) from tabla; --conteo 
 
-select round(avg(name_columna),2) --> acortar a 2 decimales, en este caso de un promedio 
+select round(avg(name_columna),2) --> acortar a 2 decimales, en este caso de un promedio.. si va el round solo se redondea a numeros enteros sin decimal
 
 -- IN () filtrar o comprobar si un valor existe en una lista determinada
 select * 
