@@ -67,7 +67,13 @@ where id_producto in (20,1,55,3);
 ALTER TABLE CLIENTES ADD PRIMARY KEY(RUT);
 
 --AGREGAR COLUMNA A TABLA
-alter table nombre_tabla add column nombre_columna boolean; --boolean es un tipo de dato , puede ser otro
+alter table nombre_tabla add column nombre_columna boolean null; --boolean es un tipo de dato , puede ser otro
 
+--Para modificar una columna:  
+alter table nombre_tabla alter column
+
+--quitar una restriccion not null de email
+ALTER TABLE IF EXISTS public.clientes
+    ALTER COLUMN email DROP NOT NULL;
 
 --*************************IMPRIMIR DIAGRAMA DE COMANDOS DE LA PPT II********************************
